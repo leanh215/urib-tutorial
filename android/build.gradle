@@ -19,16 +19,16 @@ apply from: 'gradle/dependencies.gradle'
 subprojects {
     buildscript {
         repositories {
+            maven { url "https://maven.google.com" }
             jcenter()
             maven { url deps.build.gradlePluginsUrl }
-            maven { url "https://maven.google.com" }
         }
     }
 
     repositories {
+        maven { url "https://maven.google.com" }
         jcenter()
         maven { url deps.build.gradlePluginsUrl }
-        maven { url "https://maven.google.com" }
     }
 
     apply plugin: 'checkstyle'
@@ -45,4 +45,15 @@ task wrapper(type: Wrapper) {
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+repositories {
+    maven { url 'https://maven.google.com/' }
+
+}
+
+buildscript {
+    repositories {
+        maven { url 'https://maven.google.com/' }
+    }
 }

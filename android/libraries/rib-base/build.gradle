@@ -22,6 +22,12 @@ plugins {
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 
+repositories {
+    maven {
+        url 'http://maven.google.com'
+    }
+}
+
 dependencies {
     // RIBs themselves don't need to use dagger. But the base library does use dagger
     // in order to invert a dependency. With a bit of work this could be removed.

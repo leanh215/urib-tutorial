@@ -19,6 +19,12 @@ apply plugin: "java-library"
 sourceCompatibility = "1.7"
 targetCompatibility = "1.7"
 
+repositories {
+    maven {
+        url 'http://maven.google.com'
+    }
+}
+
 dependencies {
     compile project(":libraries:rib-base")
     compileOnly deps.support.annotations

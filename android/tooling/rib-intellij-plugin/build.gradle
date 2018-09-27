@@ -14,6 +14,12 @@ repositories {
     mavenLocal()
 }
 
+repositories {
+    maven {
+        url 'http://maven.google.com'
+    }
+}
+
 dependencies {
     compile deps.apt.androidApi
     compile deps.build.commonsLang

@@ -16,6 +16,12 @@
 
 apply plugin: "java-library"
 
+repositories {
+    maven {
+        url 'http://maven.google.com'
+    }
+}
+
 dependencies {
     compile project(":libraries:rib-compiler-app")
 
